@@ -61,6 +61,10 @@ module.exports = function (param) {
 				.in('-background', background)
 				.in(param.image)
 				.toBuffer(function(err, buffer) {
+					console.log("WATERMARK ERROR");
+					console.log(err);
+					console.log("WATERMARK BUFFER");
+					console.log(buffer);
 					file.contents = buffer;
 					callback(null, file);
 				})
